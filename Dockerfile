@@ -8,7 +8,8 @@ RUN apt-get update && apt-get install -y \
  libunbound-dev \
  libevent-dev \
  libgtest-dev \
- libboost-dev
+ libboost-all-dev \
+ cmake
 
 COPY start.sh /scripts/start.sh
 
@@ -16,13 +17,9 @@ COPY buildAndInstallMonero.sh /scripts/buildAndInstallMonero.sh
 
 RUN /scripts/buildAndInstallMonero.sh
 
-ENV RPC_USER=user \
-    RPC_PASSWORD=password \
-    RPC_PORT=8332
-
 VOLUME /monero
 
-EXPOSE 8333 8332
+EXPOSE 18080
 
 ENTRYPOINT ["/scripts/start.sh"]
 
