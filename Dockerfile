@@ -17,6 +17,16 @@ COPY buildAndInstallMonero.sh /scripts/buildAndInstallMonero.sh
 
 RUN /scripts/buildAndInstallMonero.sh
 
+apt-get purge -y \
+ git \
+ build-essential \
+ bsdmainutils \
+ libunbound-dev \
+ libevent-dev \
+ libgtest-dev \
+ libboost1.55-all-dev \
+ cmake
+
 VOLUME /monero
 
 EXPOSE 18080
