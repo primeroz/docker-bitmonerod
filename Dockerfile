@@ -17,7 +17,7 @@ COPY buildAndInstallMonero.sh /scripts/buildAndInstallMonero.sh
 
 RUN /scripts/buildAndInstallMonero.sh
 
-apt-get purge -y \
+RUN apt-get purge -y \
  git \
  build-essential \
  bsdmainutils \
