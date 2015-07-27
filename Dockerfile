@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
  libunbound-dev \
  libevent-dev \
  libgtest-dev \
- libboost-all-dev \
+ libboost1.55-all-dev \
  cmake
 
 COPY start.sh /scripts/start.sh
