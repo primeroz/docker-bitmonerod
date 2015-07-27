@@ -1,7 +1,7 @@
 FROM ubuntu:14.04
 MAINTAINER Levin Keller <github@levinkeller.de>
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
  git \
  build-essential \
  bsdmainutils \
